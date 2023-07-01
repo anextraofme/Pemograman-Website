@@ -34,17 +34,17 @@
             margin-left: 150px;
         }
 
-        .navbar-menu a {
-            margin-right: 1cm;
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-        }
-
         .navbar-menu {
             display: flex;
             align-items: center;
             margin-right: 150px;
+        }
+
+        .navbar-menu a {
+                margin-right: 1cm;
+                text-decoration: none;
+                color: #333;
+                font-size: 15px;
         }
 
         .judul {
@@ -90,6 +90,8 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-right: 1px;
+
         }
 
         table th,
@@ -97,12 +99,10 @@
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-
         }
 
         table th {
             background-color: #f2f2f2;
-
         }
 
         table tr:hover {
@@ -132,10 +132,11 @@
 
         .table-img {
             max-width: 100px;
+
         }
 
 
-    .footer {
+        .footer {
     background-color: #1E1E1E;
     padding: 20px;
     color: #FFFFFF;
@@ -169,16 +170,14 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="http://localhost/Tugas16/index.php" class="navbar-logo">
-            <img src="LOGO-SMAN-55-JAKARTA.jpg" alt="Logo">
-        </a>
-        <div class="navbar-menu">
-            <a href="login-admin.php" class="login-icon">
-                <i class="fas fa-user fa-lg"></i>
-            </a>
-        </div>
+<div class="navbar">
+    <a href="http://localhost/Tugas16/index.php" class="navbar-logo">
+      <img src="LOGO-SMAN-55-JAKARTA.jpg" alt="Logo">
+    </a>
+    <div class="navbar-menu">
+      <a href="list-siswa.php">Logout</a>
     </div>
+</div>
 
     <header>
     </header>
@@ -195,12 +194,15 @@
         <thead>
             <tr>
                 <th>Foto</th>
+                <th>Username</th>
+                <th>Password</th>
                 <th>Nama</th>
                 <th>Tanggal Lahir</th>
                 <th>Alamat</th>
                 <th>Jenis Kelamin</th>
                 <th>Agama</th>
                 <th>Sekolah Asal</th>
+                <th>Tindakan</th>
             </tr>
         </thead>
         <tbody>
@@ -210,13 +212,20 @@
             while ($siswa = mysqli_fetch_array($query)) {
                 echo "<tr>";
 				echo "<td><img src=\"uploads/" . $siswa['foto'] . "\" class='table-img' alt='Foto Siswa'></td>";
+                echo "<td>" . $siswa['username'] . "</td>";
+                echo "<td>" . $siswa['password'] . "</td>";
                 echo "<td>" . $siswa['nama'] . "</td>";
                 echo "<td>" . $siswa['tanggal_lahir'] . "</td>";
                 echo "<td>" . $siswa['alamat'] . "</td>";
                 echo "<td>" . $siswa['jenis_kelamin'] . "</td>";
                 echo "<td>" . $siswa['agama'] . "</td>";
                 echo "<td>" . $siswa['sekolah_asal'] . "</td>";
-                echo "</tr>";
+
+                echo "<td class='tindakan'>";
+				echo "<a href='form-edit.php?id=" . $siswa['id'] . "'>Edit</a>";
+				echo "<a href='hapus.php?id=" . $siswa['id'] . "'>Hapus</a>";
+				echo "</td>";
+				echo "</tr>";
             }
             ?>
         </tbody>

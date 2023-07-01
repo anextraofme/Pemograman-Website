@@ -176,19 +176,19 @@
     <header>
     </header>
     <div class="navbar">
-    <a href="http://localhost/Tugas16/index.php" class="navbar-logo">
-      <img src="LOGO-SMAN-55-JAKARTA.jpg" alt="Logo">
-    </a>
-    <div class="navbar-menu">
-      <a href="index.php">Beranda</a>
-      <a href="form-daftar.php">Registrasi</a>
-      <a href="list-siswa.php">Calon Siswa</a>
-      <a href="#footer">Kontak</a>
-      <div class="navbar-search">
-        <input type="text" class="search-input" placeholder="Pencarian">
-      </div>
+        <a href="http://localhost/Tugas16/index.php" class="navbar-logo">
+            <img src="LOGO-SMAN-55-JAKARTA.jpg" alt="Logo">
+        </a>
+        <div class="navbar-menu">
+            <a href="#">Tentang Aku</a>
+            <a href="#">Galeri</a>
+            <a href="#">Alumni</a>
+            <a href="#">Kontak</a>
+            <div class="navbar-search">
+                <input type="text" class="search-input" placeholder="Pencarian">
+            </div>
+        </div>
     </div>
-  </div>
     <div class="judul">
         <fieldset>
             <h3>Pendaftaran</h3>
@@ -264,9 +264,9 @@
         }
     </script>
 
-<footer id="footer" class="footer">
-    <h2 style="text-align: center;">-- Follow Us --</h2>
-    <div class="social-media-logo">
+    <footer class="footer">
+        <h2 style="text-align: center;">-- Follow Us --</h2>
+        <div class="social-media-logo">
             <a href="https://www.instagram.com" target="_blank">
                 <img src="instagram.png" alt="Instagram" />
             </a>
@@ -281,7 +281,8 @@
             </a>
         </div>
         <div>
-            <p style="text-align: center;">&copy; 2023 SMAN 55 Jakarta. All Rights Reserved.<br>Operated by Lia Sabila - Mahasiswi Teknik Informatika Universitas Paramadina</p>
+            <p style="text-align: center;">&copy; 2023 SMAN 55 Jakarta. All Rights Reserved.<br>Operated by Lia Sabila -
+                Mahasiswi Teknik Informatika Universitas Paramadina</p>
         </div>
     </footer>
 </body>
